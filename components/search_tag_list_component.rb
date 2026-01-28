@@ -1,2 +1,0 @@
-class SearchTagListComponent < TagListComponent
-end
