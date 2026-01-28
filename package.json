@@ -1,0 +1,27 @@
+{
+  "license": "MIT",
+  "dependencies": {
+    "@alpinejs/morph": "^3.15.4",
+    "@alpinejs/persist": "^3.15.4",
+    "@babel/core": "^7.28.6",
+    "@babel/plugin-transform-runtime": "^7.28.5",
+    "@babel/preset-env": "^7.28.6",
+    "@babel/runtime": "^7.28.6",
+    "@ruffle-rs/ruffle": "^0.2.0-nightly.2026.1.23",
+    "@vituum/vite-plugin-postcss": "^1.1.0",
+    "alpinejs": "^3.15.4",
+    "jquery": "^4.0.0",
+    "jquery-hotkeys": "^0.2.2",
+    "jquery-ui": "^1.14.1",
+    "postcss": "^8.5.6",
+    "postcss-import": "^16.1.1",
+    "postcss-loader": "^8.2.0",
+    "postcss-preset-env": "^11.1.1",
+    "sass": "^1.97.3",
+    "sass-loader": "^16.0.6",
+    "terser-webpack-plugin": "^5.3.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.6"
+  }
+}
