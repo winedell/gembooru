@@ -1,0 +1,19 @@
+<%# rows %>
+
+<table class="striped">
+  <thead>
+    <tr>
+      <% rows.first.to_h.keys.each do |key| %>
+        <th><%= key.titleize %></th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <% rows.each do |row| %>
+    <tr>
+      <% row.each do |key, value| %>
+        <td><%= value %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
