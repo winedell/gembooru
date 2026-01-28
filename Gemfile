@@ -61,6 +61,18 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
+  # Locales/I18n
+  gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For bleeding edge unreleased versions
+  gem 'rails-i18n', '~> 8.0.0' # For Rails >= 8.0.0
+  gem 'rails-i18n', '~> 7.0.0' # For Rails >= 7.0.0
+  gem 'rails-i18n', '~> 6.0' # For 6.x
+  gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+  gem 'rails-i18n', '~> 4.0' # For 4.0.x
+  gem 'rails-i18n', '~> 3.0' # For 3.x
+  gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'rails-5-x' # For 5.x
+  gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'rails-4-x' # For 4.x
+  gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'rails-3-x' # For 3.x
+
   gem "public_suffix"
   gem "debug"
   gem "faker"
