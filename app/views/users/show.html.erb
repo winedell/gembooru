@@ -1,0 +1,13 @@
+<% page_title "@#{@user.pretty_name}" %>
+<%= render "secondary_links" %>
+
+<div id="c-users">
+  <div id="a-show">
+    <%= render UserProfileComponent.new(user: @user, current_user: CurrentUser.user, show_votes: (params[:show_votes].presence || cookies[:post_preview_show_votes].presence || "false").truthy?) %>
+  </div>
+</div>
+
+<% if Danbooru.config.comments_enabled?.to_s.truthy? %>
+  <% atom_feed_tag "Comments on #{@user.pretty_name}'s uploads", comments_url(:atom, search: { post_tags_match: "user:#{@user.name}" }) %>
+  <% atom_feed_tag "Comments on posts commented on by #{@user.pretty_name}", comments_url(:atom, search: { post_tags_match: "commenter:#{@user.name}" }) %>
+<% end %>
