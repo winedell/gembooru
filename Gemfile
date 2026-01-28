@@ -60,6 +60,28 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "public_suffix"
+  gem "debug"
+  gem "faker"
+  gem "resolv"
+  gem "rover-df"
+  gem "ffi-libarchive"
+  gem "pry-rails"
+  gem "drb"
+  gem "net-sftp"
+  gem "rbnacl"
+  gem "x25519"
+  gem "ed25519"
+  gem "bcrypt_pbkdf"
+  gem "connection_pool"
+  gem "rotp"
+  gem "rqrcode"
+  gem "kramdown"
+  gem "abbrev"
+  gem "rubyzip", require: "zip"
+  gem "webrick"
+  gem "useragent"
 end
 
 group :development do
