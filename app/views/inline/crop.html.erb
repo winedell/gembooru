@@ -1,0 +1,25 @@
+<%
+  if @image.has_sample?
+    url = @image.sample_url
+    width = @image.sample_width
+    height = @image.sample_height
+  else
+    url = @image.file_url
+    width = @image.width
+    height = @image.height
+  end
+%>
+<%= form_tag({ action: 'crop' },
+  class: 'image-crop js-image-crop',
+  level: :member,
+  style: "width: #{width}px; height:#{height}px",
+) do %>
+  <%= image_tag(url, class: 'image-crop__image js-image-crop--image') %>
+
+  <%= hidden_field_tag 'id', @image.id %>
+  <%= hidden_field_tag 'left', 0 %>
+  <%= hidden_field_tag 'right', 0 %>
+  <%= hidden_field_tag 'top', 0 %>
+  <%= hidden_field_tag 'bottom', 0 %>
+  <%= submit_tag t('buttons.save') %>
+<% end %>
