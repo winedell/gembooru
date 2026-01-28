@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title><%= pahe_title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Gembooru">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="icon" href="/favicon.ico" sizes="16x16" type="image/x-icon">
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="top"  title="<%= Danbooru.config.app_name %>" href="/">
+    <%= csrf_meta_tag %>
+    <%= raw Danbooru.config.custom_html_header_content %>
+    <%= javascript_pack_tag "application", defer: false %>
+    <%= <%= stylesheet_pack_tag "application" %> %>
+    <%= yield :html_header %>
+  </head>
+  <body lang="en">
+    <div id="page">
+      <%= yield :layout%>
+    </div>
+  </body>
+</html>
